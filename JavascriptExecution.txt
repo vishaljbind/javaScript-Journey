@@ -1,0 +1,57 @@
+# Javascript Execution Context
+
+1. this refer to global EC ( Browser -> window object) , 
+   if deployed on server side , the website will not refer window object
+
+2. Function EC
+3. Eval EC
+
+# how Javascript is work ?
+1. Memory Execution phase
+2. Execution phase
+
+The JavaScript Engine
+
+When a web page loads, the browser creates a JavaScript engine, which is responsible for executing JavaScript code. The engine consists of two main components:
+
+Parser: Breaks down the JavaScript code into a syntax tree, which is an abstract representation of the code.
+Interpreter: Executes the syntax tree, line by line, to produce the desired output.
+How JavaScript Code is Executed
+
+Here's a step-by-step explanation of how JavaScript code is executed:
+
+Loading: The browser loads the HTML document, which includes JavaScript code.
+Parsing: The JavaScript engine parses the code, checking for syntax errors and creating a syntax tree.
+Execution: The interpreter executes the syntax tree, line by line, to produce the desired output.
+Runtime Environment: The JavaScript engine provides a runtime environment, which includes objects, functions, and variables that are accessible to the code.
+Event-Driven: JavaScript is an event-driven language, meaning that it responds to events, such as user interactions (e.g., clicks, hover), network requests, and timer events.
+JavaScript in the Browser
+
+In a web browser, JavaScript is executed in the following contexts:
+
+Global Scope: The global scope is the top-most scope, where variables and functions are defined.
+Function Scope: Functions have their own scope, where variables and functions are defined locally.
+Block Scope: Blocks, such as if statements and loops, have their own scope.
+JavaScript and the DOM
+
+JavaScript interacts with the Document Object Model (DOM), which represents the structure of an HTML document. JavaScript can:
+
+Manipulate the DOM: Modify the HTML document by adding, removing, or modifying elements.
+Respond to Events: Listen to events, such as clicks, and respond accordingly.
+Here's an example of JavaScript code that demonstrates some of these concepts:
+
+javascript
+Copy code
+// Global scope
+let userName = 'Anand';
+
+// Function scope
+function greetUser() {
+  console.log(`Hello, ${userName}!`);
+}
+
+// Event-driven programming
+document.addEventListener('DOMContentLoaded', () => {
+  greetUser();
+});
+This code defines a global variable userName, a function greetUser, and an event listener that calls the function when the DOM is loaded.
