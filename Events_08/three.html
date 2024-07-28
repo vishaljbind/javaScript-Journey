@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> ANAND TECH</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+     const intervalid =  setInterval(() => {
+        // console.log('ANAND' , Date.now());
+        document.querySelector('#start').addEventListener('click', function (e) {
+            document.querySelector('h1').innerHTML = "Running..."
+            console.log(Date.now());
+        })
+    }, 1000);
+    
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(intervalid)
+        console.log('STOPPED');
+    })
+    
+</script>
+</html>
